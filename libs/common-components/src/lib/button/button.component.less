@@ -1,0 +1,71 @@
+@import "./../../styles/variables";
+
+
+.icon-button{
+  padding: 0px !important;
+  margin: 0px 7px;
+}
+
+.button {
+  padding: 0px 10px;
+  font-size: 14px;
+  color: @regent-gray;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  min-width: 37px;
+  height: 37px;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+
+  &.inactive{
+    cursor: not-allowed;
+    opacity: .4;
+  }
+  &.active *{
+    color: lighten(rgb(149,157,165),20%);
+  }
+
+  &.primary{
+    background-color: @primary;
+    color: #FFF;
+    &.active{
+      color: #FFF;
+      background-color: lighten(@primary,20%);
+    }
+  }
+
+  &.brand{
+    background-color: @brand;
+    color: #FFF;
+    &.active{
+      color: #FFF;
+      background-color: lighten(@primary,20%);
+    }
+  }
+
+  .text{
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+  .button-tooltip {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media @phone-down {
+  .button {
+    font-size: 22px;
+  }
+
+  .arrow-button {
+    margin: 5px;
+  }
+}
