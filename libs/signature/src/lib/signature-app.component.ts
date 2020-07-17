@@ -1,13 +1,6 @@
 import {Component, ComponentRef, OnDestroy, OnInit} from '@angular/core';
 import {SignatureService} from "./signature.service";
 import {
-  AnnotationType,
-  CommentAnnotation,
-  RemoveAnnotation,
-  Comment,
-  FileAnnotationDescription, PageAnnotationModel, AnnotationData, Dimension
-} from "./../../../annotation/src/lib/annotation-models";
-import {
   FileDescription,
   FileModel,
   ModalService,
@@ -90,20 +83,7 @@ export class SignatureAppComponent implements OnDestroy, OnInit {
   _zoom = 100;
   _pageWidth: number;
   _pageHeight: number;
-  annotationTypes = [
-    AnnotationType.TEXT,
-    AnnotationType.TEXT_STRIKEOUT,
-    AnnotationType.TEXT_UNDERLINE,
-    AnnotationType.TEXT_REPLACEMENT,
-    AnnotationType.TEXT_REDACTION,
-    AnnotationType.POLYLINE,
-    AnnotationType.ARROW,
-    AnnotationType.DISTANCE,
-    AnnotationType.AREA,
-    AnnotationType.TEXT_FIELD,
-    AnnotationType.WATERMARK,
-    AnnotationType.POINT,
-  ];
+
   constructor(private _signatureService: SignatureService,
               private _modalService: ModalService,
               configService: SignatureConfigService,
